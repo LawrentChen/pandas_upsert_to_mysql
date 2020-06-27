@@ -1,0 +1,14 @@
+# MySQL config
+#
+# YAML Reference: https://pyyaml.org/wiki/PyYAMLDocumentation
+#
+# Be aware that the upsert operation in this package
+# is achieved by using temporary table. Therefore the
+# MySQL account defined here must have insert, update,
+# create, index and create temporary table privileges.
+
+host: ''
+port:
+user: ''
+password: ''
+charset: 'utf8'
