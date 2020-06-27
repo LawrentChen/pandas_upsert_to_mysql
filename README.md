@@ -118,7 +118,7 @@ Pandas official (up to 1.0.5 version) `to_sql` method does not implement upsert 
 
 Notice that the **replace** here takes effect on the whole **table** rather than each specific row, which means the native method can only truncate the whole table and re-insert the entire DataFrame.
 
-Demand for the upsert feature has been discussed in the official repo long before, see [issue #14553](https://github.com/pandas-dev/pandas/issues/14553). But the discussion has last for almost 4 years (up to 1.0.5 version), and the officials still can not deliver this feature in a stable release. For now it is only called "**may be fixed** by [#29636”](https://github.com/pandas-dev/pandas/pull/29636)"
+Demand for the upsert feature has been discussed in the official repo long before, see [issue #14553](https://github.com/pandas-dev/pandas/issues/14553). But the discussion has last for almost 4 years (up to 1.0.5 version), and the officials still can not deliver this feature in a stable release. For now it is only called "**may be fixed** by [#29636](https://github.com/pandas-dev/pandas/pull/29636)"
 
 In those discussion, the major consideration of the officials are:
 
@@ -130,7 +130,7 @@ Therefore it can be expected that, the officials may be conservative on their fi
 
 
 
-Up to the last commit of this repo, pandas 1.0.5 version's native `to_sql` method still does not support **upsert**.*
+Up to the last commit of this repo, pandas 1.0.5 version's native `to_sql` method still does not support **upsert**.
 
 
 
@@ -140,4 +140,4 @@ Up to the last commit of this repo, pandas 1.0.5 version's native `to_sql` metho
 - [pandabase](https://github.com/notsambeck/pandabase): support multiple databases; upsert by primary key, require to set the primary key as the DataFrame index; seems not supporting MySQL
 - [pandas-to-mysql](https://github.com/frank690/pandas-to-mysql)
 - [pandas-sql](https://github.com/xbanke/pandas-sql)
-- Pandas-to_sql-upsert(https://github.com/ryanbaumann/Pandas-to_sql-upsert)
+- [Pandas-to_sql-upsert](https://github.com/ryanbaumann/Pandas-to_sql-upsert)

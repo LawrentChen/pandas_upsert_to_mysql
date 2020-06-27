@@ -113,7 +113,7 @@ pandas 官方（截至 1.0.5 版本）提供的 `to_sql` 方法并未实现 upse
 
 注意此参数的 **replace** 是对**全表**而非具体某一行记录生效，也就是说原生方法只能将整张表完全删除后，再全部重新插入
 
-关于逐行记录 upsert 需求早已有开发者于官方 repo 展开讨论，详见 [issue #14553](https://github.com/pandas-dev/pandas/issues/14553)。然而讨论持续了将近 4 年时间（截至 1.0.5 版本），官方仍未在正式版本中提供此功能，暂时仅称“**may be fixed** by [#29636”](https://github.com/pandas-dev/pandas/pull/29636)
+关于逐行记录 upsert 需求早已有开发者于官方 repo 展开讨论，详见 [issue #14553](https://github.com/pandas-dev/pandas/issues/14553)。然而讨论持续了将近 4 年时间（截至 1.0.5 版本），官方仍未在正式版本中提供此功能，暂时仅称“**may be fixed** by [#29636](https://github.com/pandas-dev/pandas/pull/29636)"
 
 从讨论中可以看到官方的主要考量：
 
@@ -129,16 +129,10 @@ pandas 官方（截至 1.0.5 版本）提供的 `to_sql` 方法并未实现 upse
 
 
 
-## API 文档
-
-
-
-
-
 ## 参考
 
 - [pangres](https://github.com/ThibTrip/pangres)：支持多种数据库实现；通过主键进行 upsert，要求 dataframe index 为主键（**实质上兼容唯一约束**）；不使用临时表，速度更快；实验证明可以兼容事先建立起唯一约束的表模式
 - [pandabase](https://github.com/notsambeck/pandabase)：支持多种数据库实现；通过主键进行 upsert，要求 dataframe index 为主键；似乎不支持 MySQL
 - [pandas-to-mysql](https://github.com/frank690/pandas-to-mysql)
 - [pandas-sql](https://github.com/xbanke/pandas-sql)
-- Pandas-to_sql-upsert(https://github.com/ryanbaumann/Pandas-to_sql-upsert)
+- [Pandas-to_sql-upsert](https://github.com/ryanbaumann/Pandas-to_sql-upsert)
