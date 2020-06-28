@@ -118,7 +118,7 @@ Pandas official (up to 1.0.5 version) `to_sql` method does not implement upsert 
 
 Notice that the **replace** here takes effect on the whole **table** rather than each specific row, which means the native method can only truncate the whole table and re-insert the entire DataFrame.
 
-Demand for the upsert feature has been discussed in the official repo long before, see [issue #14553](https://github.com/pandas-dev/pandas/issues/14553). But the discussion has last for almost 4 years (up to 1.0.5 version), and the officials still can not deliver this feature in a stable release. For now it is only called "**may be fixed** by [#29636](https://github.com/pandas-dev/pandas/pull/29636)"
+Demand for the upsert feature has been discussed in the official repo long before, see [issue #14553](https://github.com/pandas-dev/pandas/issues/14553). But the discussion has lasted for almost 4 years (up to 1.0.5 version), and the officials still can not deliver this feature in a stable release. For now it is only called "**may be fixed** by [#29636](https://github.com/pandas-dev/pandas/pull/29636)"
 
 In those discussion, the major consideration of the officials are:
 
