@@ -94,7 +94,7 @@ class Upsert(object):
             stmt = insert(target_table).from_select(bare_column_list, session.query(*column_list))
             stmt = stmt.prefix_with('IGNORE')
         else:
-            raise ValueError('if_record_exists 参数只接受 update 或 ignore')
+            raise ValueError('if_record_exists param only accept "update" or "ignore"')
         session.execute(stmt)
 
     def to_mysql(self, df, target_table, temp_table, if_record_exists):
