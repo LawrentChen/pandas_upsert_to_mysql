@@ -27,7 +27,7 @@ Let's use an order table as instance. Here the `row_id` is the auto-incremented 
 ```mysql
 -- Here we use native SQL to create the table for illustration convenience. In the actual pratice we need to use SQLAlchemy.
 
-CREATE TABLE `order` (
+CREATE TABLE `order_info` (
   `row_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto_incremented_ID',
   `order_id` varchar(5) NOT NULL DEFAULT '-9999' COMMENT 'order_id',
   `product_id` varchar(5) NOT NULL DEFAULT '-9999' COMMENT 'product_id',

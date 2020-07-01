@@ -27,7 +27,7 @@ pip install pandas_upsert_to_mysql
 ```mysql
 -- 这里为了便于说明使用原生 SQL 建表，实际需要配合使用 SQLAlchemy
 
-CREATE TABLE `order` (
+CREATE TABLE `order_info` (
   `row_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto_incremented_ID',
   `order_id` varchar(5) NOT NULL DEFAULT '-9999' COMMENT 'order_id',
   `product_id` varchar(5) NOT NULL DEFAULT '-9999' COMMENT 'product_id',
