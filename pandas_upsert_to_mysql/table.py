@@ -26,7 +26,7 @@ Therefore, the definition order of 'update_time' and
 'create_time' should not be exchanged.
 """
 import pandas as pd
-from sqlalchemy import (Index, Column, Integer, String, TIMESTAMP, func)
+from sqlalchemy import (Index, Column, Integer, String, TIMESTAMP, func, text)
 from sqlalchemy.ext.declarative import declarative_base
 
 from connection import Connector
@@ -58,7 +58,9 @@ class Order(AbstractOrder):
     """
     __tablename__ = 'order_info'
 
-    update_time = Column(TIMESTAMP, nullable=False, comment='last_update_time')
+    update_time = Column(TIMESTAMP, nullable=False,
+                         server_default=text('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
+                         comment='last_update_time')
     create_time = Column(TIMESTAMP, nullable=False, server_default=func.current_timestamp(),
                          comment='first_create_time')
 
