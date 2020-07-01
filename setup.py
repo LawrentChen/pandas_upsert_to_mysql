@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pandas_upsert_to_mysql",
-    version="0.0.2",
+    version="0.0.3",
     author="LawrentChen",
     author_email="laurant.chen@gmail.com",
     description="Enhanced `to_sql` method in pandas DataFrame, for MySQL database only.",
